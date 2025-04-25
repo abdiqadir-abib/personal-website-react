@@ -27,6 +27,7 @@
 
 .nav-links {
   display: flex;
+  list-style: none;
 }
 
 .nav-links a {
@@ -49,35 +50,24 @@
   cursor: pointer;
 }
 
+/* Responsive */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
   }
 
   .nav-links {
-    display: none;
     position: absolute;
     top: 60px;
-    left: 0;
-    background-color: #333;
-    width: 100%;
+    right: 20px;
     flex-direction: column;
-    text-align: center;
-    padding: 1rem 0;
+    background: #333;
+    padding: 15px 25px;
+    display: none;
+    border-radius: 8px;
   }
 
-  .nav-links a {
-    margin: 10px 0;
-    font-size: 1.2rem;
-  }
-
-  .nav-links.show {
+  .nav-links.active {
     display: flex;
-    animation: slideDown 0.3s ease-out;
-  }
-
-  @keyframes slideDown {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
   }
 }

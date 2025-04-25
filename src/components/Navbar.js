@@ -1,25 +1,27 @@
-// src/components/Navbar.js
-import React from 'react';
-import './Navbar.css'; // Add your navbar styles here
+import React, { useState } from "react";
+import "./Navbar.css";
 
-const Navbar = () => {
+function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => setIsOpen(!isOpen);
+
   return (
     <nav className="navbar">
-    
-    <div className="nav-container">
-      <a href="#home" className="logo">AbdiQadir</a>
-      <div className="menu-toggle" id="menu-toggle">&#9776;</div>
-     
-      
-      <div className="nav-links" id="nav-links">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-        <a href="resume.pdf" download>Resume</a>
+      <div className="nav-container">
+        <div className="logo">AbdiQadir</div>
+        <button className="menu-toggle" onClick={toggleMenu}>
+          <i className={`fa ${isOpen ? "fa-times" : "fa-bars"}`} />
+        </button>
+        <ul className={`nav-links ${isOpen ? "active" : ""}`}>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#socials">Socials</a></li>
+          <li><a href="#resume">Resume</a></li>
+        </ul>
       </div>
-    </div>
-  </nav>
+    </nav>
   );
-};
+}
 
 export default Navbar;
