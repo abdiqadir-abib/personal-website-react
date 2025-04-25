@@ -13,10 +13,10 @@ const Contacts = () => {
         <link href="mailto:abdiqadir.smr@gmail.com" target="_blank"  class="fas fa-envelope"/>
     </div> */}
     <div className="social-media-links">
-      <a href="https://github.com/your-profile" target="_blank" rel="noopener noreferrer">
+      <a href="https://github.com/abdiqadir-abib" target="_blank" rel="noopener noreferrer">
         <i className="fab fa-github"></i>
       </a>
-      <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
+      <a href="https://www.linkedin.com/in/abdiqadir-abib-b27086178" target="_blank" rel="noopener noreferrer">
         <i className="fab fa-linkedin"></i>
       </a>
       <a href="https://x.com/abdiqadir_abib" target="_blank" rel="noopener noreferrer">
